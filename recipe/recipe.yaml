@@ -1,0 +1,37 @@
+context:
+  version: 1.5.1
+
+package:
+  name: viu
+  version: ${{ version }}
+
+source:
+  url: https://github.com/atanunq/viu/archive/v${{ version }}.tar.gz
+  sha256: bd1bc61367420dcbb1ab46df53a46fd7d35379960c9ab39bbccb7ace5afaeb62
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - ${{ compiler('rust') }}
+    - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
+    - cargo-bundle-licenses
+
+tests:
+  - script:
+      - viu --help
+
+about:
+  license: MIT
+  license_file:
+    - LICENSE-MIT
+    - THIRDPARTY.yml
+  summary: Simple terminal image viewer written in Rust
+  homepage: https://github.com/atanunq/viu
+  repository: https://github.com/atanunq/viu
+
+extra:
+  recipe-maintainers:
+    - danielnachun
