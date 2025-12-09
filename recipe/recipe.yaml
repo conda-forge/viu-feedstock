@@ -1,5 +1,5 @@
 context:
-  version: 1.5.1
+  version: "1.6.0"
 
 package:
   name: viu
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/atanunq/viu/archive/v${{ version }}.tar.gz
-  sha256: bd1bc61367420dcbb1ab46df53a46fd7d35379960c9ab39bbccb7ace5afaeb62
+  sha256: 2164d8626b8210227ded514a0ca18fc4092571e174f55905facd33837fe2eb4c
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
